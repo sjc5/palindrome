@@ -24,6 +24,16 @@ describe("Phrase", function() {
       let punctuatedPalindrome = new Phrase("Madam, I'm Adam.");
       assert(punctuatedPalindrome.palindrome());
     });
+
+    it("should return true for all numbers palindrome", function() {
+      let numberPalindrome = new Phrase("12321");
+      assert(numberPalindrome.palindrome());
+    });
+
+    it("should return false for all numbers non-palindrome", function() {
+      let numberNonPalindrome = new Phrase("1232");
+      assert(!numberNonPalindrome.palindrome());
+    });
   });
 
   describe("#letters", function() {

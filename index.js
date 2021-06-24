@@ -15,20 +15,10 @@ function Phrase(content) {
     return this.letters().toLowerCase();
   }
 
-  // Returns the letters in the content (ORIGINAL VERSION)
-  // this.letters = function letters() {
-  //   let theLetters = [];
-  //   for (let i = 0; i < this.content.length; i++) {
-  //     if (this.content.charAt(i).match(/[a-zA-Z]/)) {
-  //       theLetters.push(this.content.charAt(i));
-  //     }
-  //   }
-  //   return theLetters.join("");
-  // }
-
-  // Returns the letters in the content (REFACTORED VERSION)
+  // Returns the letters in the content
   this.letters = function letters() {
-    return Array.from(this.content).filter(c => c.match(/[a-z]/i)).join("");
+    const regex = /[a-z0-9]/gi;
+    return (this.content.match(regex) || []).join("");
   }
 
   // Returns true for a palindrome, false otherwise.
