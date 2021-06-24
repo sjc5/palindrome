@@ -4,15 +4,13 @@
 `sudo npm install activefog-palindrome`
   
 ## usage
-In your JavaScript file, add the method as follows:
+Add the package at the top of your JavaScript file as follows:
 
 `let Phrase = require("activefog-palindrome");`
 
-The method Phrase takes a string and creates an object,
-with the string input saved as "content" in the object.
-You can accomplish this as follows:
+Phrase is a constructor method that takes a string and creates an object with the string stored in `this.content` and a palindrome-checking method saved in `this.palindrome`.
 
+In practice, you can do this as follows:
 `let phrase = new Phrase("some string");`
   
-Now, you the object is saved in the `phrase` variable, 
-and the string is saved in `phrase.content`.
+Now, you can check whether the string is a palindrome by calling `phrase.palindrome()`, which will return false if the string is not a palindrome and true if the string is a palindrome.
